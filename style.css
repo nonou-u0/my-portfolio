@@ -185,23 +185,7 @@ body {
 }
 /* スマホの大きさ */
 @media (max-width: 480px) {
-  .main-visual {
-    flex-direction: column; /* 写真と文字を縦に並べる */
-    height: auto;           /* 高さは内容に合わせる */
-    padding: 1em;
-    text-align: center;
-  }
 
-  .nono {
-    width: 100px;
-    height: 100px;
-    margin: 1em auto;
-  }
-
-  .text-area {
-    align-self: center;
-    margin-bottom: 0.5em;
-  }
 
   .strawberry-group {
     gap: 10px;
