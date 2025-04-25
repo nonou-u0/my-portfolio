@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 上でbodyを設定する必要あり */
+  /* 縦並び */
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  padding: 1em;
+  background-color: white; /* ヘッダー・フッターも草っぽく */
+  font-weight: bold;
+  color: #ff69b4;
+}
+
+.main-visual{
+  width: 100%;
+  height: 200px;
+  background:  #e6ffe6;
+  justify-content: flex-start;; /* 左右に配置 */
+  align-items: center;            /* 縦の中央に揃える */
+  display: flex;
+  padding: 0 2em;
+   /* 左右に余白 */
+  flex-shrink: 0;
+  color: #4b2e2e;
+}
+
+.nono {
+  width: 150px;
+  height: 150px;
+  margin: 1em 2em;
+  object-fit: cover;        /* まるくするならこれ */
+  border: 3px solid #ff69b4;  /* かわいい枠も追加 */
+  margin-right: 1em;
+  object-position: center top;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.main {
+  width: 100%; /* 横幅いっぱい */
+  background-color: #e6ffe6; /* 背景色green * */
+  flex: 1;
+}
+
+.footer{
+  width: 100%;/* 横幅いっぱい */
+  height: 120px;/* 高さ120px */
+  background-color: white;
+  color: #ff69b4;
+  text-align: center;
+  padding: 2.5em;
+  font-weight: bold;
+}
+
+.strawberry-group {
+  position: absolute;/* ← ツタの画像の上で調整（必要に応じて変えて） */
+  left: 50%;
+  transform: translateX(-50%); /* 中央揃え */
+  display: flex;
+  gap: 20px;
+  z-index: 1; /* ツタの上に出す */
+  top: 34px;
+}
+
+.strawberry {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease-in-out;/* アニメーション */
+}
+
+#ichigo3 {
+  margin-top: 45px; /* ← 他より下にズラす */
+}
+
+#ichigo6{
+  margin-top: 45px; /* ← 他より下にズラす */
+}
+
+.strawberry-wrapper:hover .strawberry {
+  transform: scale(1.2);
+}
+
+.strawberry-wrapper:hover .strawberry-text {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.tutaoya {
+  position: relative; /* この中で位置調整できるようにする */
+  width: 100%;
+}
+
+.tuta {
+  width: 100%;
+  display: block;
+  /* width: auto; 1 画面いっぱい= width=100% */
+}
+
+/* 下の２つセット */
+.strawberry-wrapper {
+  position: relative;
+  width: 150px; /* .strawberryと合わせる */
+  height: 150px;
+}
+
+.strawberry-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  /* 文字中央 */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px #a0522d;
+  pointer-events: none;
+  z-index: 2;
+  text-align: center;
+}
+
+.age-text {
+  top: 85%; /* 少し下にズラす */
+}
+
+@media (min-width: 768px) {
+  .strawberry {
+    width: 240px;
+    height: 240px;
+  }
+
+  #ichigo3,
+  #ichigo6 {
+    margin-top: 140px;
+  }
+
+  #ichigo1,#ichigo2,#ichigo4,#ichigo5 {
+    margin-top: 30px;
+  }
+
+  .strawberry-group {
+    gap: 200px;
+  }
+
+  .strawberry-wrapper {
+    position: relative;
+    width: 240px; /* .strawberryと合わせる */
+    height: 240px;
+  }
+  
+  .strawberry-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    /* 文字中央 */
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px #a0522d;
+    pointer-events: none;
+    z-index: 2;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .age-text {
+    top: 115%; /* 少し下にズラす */
+  }
+}
+/* スマホの大きさ */
+@media (max-width: 480px) {
+  .main-visual {
+    flex-direction: column; /* 写真と文字を縦に並べる */
+    height: auto;           /* 高さは内容に合わせる */
+    padding: 1em;
+    text-align: center;
+  }
+
+  .nono {
+    width: 100px;
+    height: 100px;
+    margin: 1em auto;
+  }
+
+  .text-area {
+    align-self: center;
+    margin-bottom: 0.5em;
+  }
+}
