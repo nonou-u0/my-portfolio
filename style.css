@@ -76,6 +76,7 @@ body {
   left: 50%;
   transform: translateX(-50%); /* 中央揃え */
   display: flex;
+  
   gap: 20px;
   z-index: 1; /* ツタの上に出す */
   top: 34px;
@@ -139,7 +140,7 @@ body {
   top: 85%; /* 少し下にズラす */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 805px) {
   .strawberry {
     width: 240px;
     height: 240px;
@@ -147,15 +148,15 @@ body {
 
   #ichigo3,
   #ichigo6 {
-    margin-top: 140px;
+    margin-top: 90px;
   }
 
   #ichigo1,#ichigo2,#ichigo4,#ichigo5 {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   .strawberry-group {
-    gap: 200px;
+    gap: 10px;
   }
 
   .strawberry-wrapper {
@@ -163,7 +164,7 @@ body {
     width: 240px; /* .strawberryと合わせる */
     height: 240px;
   }
-  
+
   .strawberry-text {
     position: absolute;
     top: 65%;
@@ -179,7 +180,7 @@ body {
   }
 
   .age-text {
-    top: 115%; /* 少し下にズラす */
+    top: 95%; /* 少し下にズラす */
   }
 }
 /* スマホの大きさ */
@@ -200,5 +201,29 @@ body {
   .text-area {
     align-self: center;
     margin-bottom: 0.5em;
+  }
+
+  .strawberry-group {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    transform: none;
+    left: auto;
+  }
+
+  .strawberry-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .strawberry {
+    width: 120px;
+    height: 120px;
+  }
+
+  .strawberry-text {
+    font-size: 14px;
   }
 }
