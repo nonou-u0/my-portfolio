@@ -186,18 +186,19 @@ body {
 /* スマホの大きさ */
 @media (max-width: 480px) {
 
-  .strawberry-group {
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    top: 0;
-    transform: none;
-    left: auto;
-    max-width: 100%; /* これでスマホからとびださない*/
-    overflow-x: hidden;
-  }
 
+  @media (max-width: 480px) {
+    .strawberry-group {
+      position: absolute; /* ← これでツタの上に重ねるまま */
+      top: 10px;           /* 好きな位置に調整 */
+      left: 50%;
+      transform: translateX(-50%);
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 100%;
+      overflow-x: hidden;
+      z-index: 2;          /* 念のため、上に出す */
+    }
   .strawberry-wrapper {
     width: 80px;
     height: 80px;
@@ -215,7 +216,7 @@ body {
 
   #ichigo3,
   #ichigo6 {
-    margin-top: -200px;
+    margin-top: 200px;
   }
 
   #ichigo1,#ichigo2,#ichigo4,#ichigo5 {
