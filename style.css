@@ -213,4 +213,13 @@ body {
   .strawberry-text {
     font-size: 14px;
   }
+
+  #ichigo3,
+  #ichigo6 {
+    margin-top: 90px;
+  }
+
+  #ichigo1,#ichigo2,#ichigo4,#ichigo5 {
+    margin-top: 25px;
+  }
 }
