@@ -76,8 +76,7 @@ body {
   left: 50%;
   transform: translateX(-50%); /* 中央揃え */
   display: flex;
-  
-  gap: 20px;
+  gap: 20px;/* いちごの幅 */
   z-index: 1; /* ツタの上に出す */
   top: 34px;
 }
@@ -204,7 +203,7 @@ body {
   }
 
   .strawberry-group {
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
@@ -222,7 +221,7 @@ body {
 
   .strawberry {
     width: 80px;
-    height: 80px;
+    height: 800px;
   }
 
   .strawberry-text {
