@@ -186,7 +186,6 @@ body {
 /* スマホの大きさ */
 @media (max-width: 480px) {
 
-
   .strawberry-group {
     gap: 10px;
     flex-wrap: wrap;
@@ -216,7 +215,7 @@ body {
 
   #ichigo3,
   #ichigo6 {
-    margin-top: 200px;
+    margin-top: -200px;
   }
 
   #ichigo1,#ichigo2,#ichigo4,#ichigo5 {
