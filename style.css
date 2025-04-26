@@ -185,7 +185,7 @@ body {
 }
 /* スマホの大きさ */
 @media (max-width: 480px) {
-  
+
   .strawberry-wrapper {
     width: 80px;
     height: 80px;
@@ -203,10 +203,10 @@ body {
 
   #ichigo3,
   #ichigo6 {
-    margin-top: 200px;
+    margin-top: 100px;
   }
 
   #ichigo1,#ichigo2,#ichigo4,#ichigo5 {
-    margin-top: 25px;
+    margin-top: 50px;
   }
 }
